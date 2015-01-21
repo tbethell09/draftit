@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.1.6'
 
-gem 'sqlite3'
+
 
 gem 'sass-rails', '~> 4.0.3'
 
@@ -23,8 +23,15 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'spring',        group: :development
 
+group :development, :test do 
+  gem 'sqlite3', '1.3.9'  
 
+end
 
+group :production do 
+    gem 'pg',              '0.17.1'
+    gem 'rails_12factor',  '0.0.2'
+end
 
 
 
